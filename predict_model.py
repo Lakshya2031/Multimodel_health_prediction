@@ -105,7 +105,7 @@ if (selected=='Heart_disease_Prediction'):
     
     hd_diagnosis=''
     if st.button('HD_test'):
-        hd_prediction=heart_disease_model.predict([[age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal]])
+        hd_prediction=heart_disease_model.predict([[age,sex,cp,trestbps,chol,fbs,restecg,exang,oldpeak,slope,ca,thal]])
         if hd_prediction==0:
             hd_diagnosis="No hd"
             

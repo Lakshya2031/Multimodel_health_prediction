@@ -73,21 +73,24 @@ if (selected=='Heart_disease_Prediction'):
         
     with col1:
         restecg=st.number_input("restecg")
-        
+
     with col2:
-        exang=st.number_input("exang")
+        thalach=st.number_input("thalach")
         
     with col3:
+        exang=st.number_input("exang")
+        
+    with col1:
         oldpeak=st.number_input("oldpeak")
         
     
-    with col1:
+    with col2:
         slope=st.number_input("slope")
         
-    with col2:
+    with col3:
         ca=st.number_input("ca")
         
-    with col3:
+    with col1:
         thal=st.number_input("thal")
     
     
@@ -105,7 +108,7 @@ if (selected=='Heart_disease_Prediction'):
     
     hd_diagnosis=''
     if st.button('HD_test'):
-        hd_prediction=heart_disease_model.predict([[age,sex,cp,trestbps,chol,fbs,restecg,exang,oldpeak,slope,ca,thal]])
+        hd_prediction=heart_disease_model.predict([[age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal]])
         if hd_prediction==0:
             hd_diagnosis="No hd"
             
